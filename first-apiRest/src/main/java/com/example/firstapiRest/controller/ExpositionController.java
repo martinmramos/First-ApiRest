@@ -13,8 +13,12 @@ public class ExpositionController {
     }
 
     @GetMapping("/exposition/{num}/cars")
-    public void getCarsByExposition(@PathVariable String num){
+    public void getCarsByExposition(@PathVariable String num) {
         System.out.println("Los coches de la exposición " + num + " son los siguientes.");
     }
 
+    @GetMapping("/exposition/{num}/car/{id}")
+    public void getCarByIdInExpositionByNumber(@PathVariable String id, @PathVariable String num) {
+        System.out.println("Los datos del coche " + id + " en la exposición " + num + " son los siguientes.");
+    }
 }
